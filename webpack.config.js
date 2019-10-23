@@ -33,23 +33,39 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       {
-        test: /\.(gif|jpg|jpeg|png|svg)$/,
-        use: [
+        test: /\.less$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' },
           {
-            loader: 'url-loader',
+            loader: 'less-loader',
             options: {
-              limit: 1024,
-              name: '[name].[ext]'
-            }
-          }
-        ]
-      }
+              javascriptEnabled: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(ico|png|jpg|jpeg|mp4|gif|mov)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+          },
+        }],
+      },
+      { test: /\.(obj|glb|eot|woff|woff2|svg|ttf|otf)$/, use: 'file-loader' },
+      {
+        test: /\.js|jsx$/,
+        exclude: [/node_module/, /third-party/, /\.json$/],
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015', 'stage-0'],
+          },
+        }],
+      },
     ]
   }
 }
