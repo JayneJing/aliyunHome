@@ -57,7 +57,7 @@ const config = {
       },
       { test: /\.(obj|glb|eot|woff|woff2|svg|ttf|otf)$/, use: 'file-loader' },
       {
-        test: /\.js|jsx$/,
+        test: /\.js$/,
         exclude: [/node_module/, /third-party/, /\.json$/],
         use: [{
           loader: 'babel-loader',

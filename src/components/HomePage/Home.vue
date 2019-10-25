@@ -1,29 +1,22 @@
 <template>
-	<div>{{TopNavTitle}}</div>
+	<div>
+		<NavigationAndCarousel></NavigationAndCarousel>
+		<CompanyApplication></CompanyApplication>
+	</div>
 </template>
 <script>
-  import {mapState} from 'vuex'
+  import NavigationAndCarousel from './NavigationAndCarousel/NavigationAndCarousel.vue'
+  import CompanyApplication from './CompanyApplication/CompanyApplication.vue'
   export default {
     name: "home",
     data() {
       return {
       }
     },
-    created(){
-      this.getTopNavTitle()
+    components: {
+      CompanyApplication,
+      NavigationAndCarousel,
     },
-    mounted(){
-    },
-    computed: {
-      ...mapState({
-        TopNavTitle: state => state.HomePage.TopNavTitle,
-      })
-    },
-    methods: {
-      getTopNavTitle() {
-        this.$store.dispatch('getTopNavTitle')
-      },
-    }
   }
 </script>
 <style></style>
