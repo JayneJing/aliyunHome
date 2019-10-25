@@ -55,7 +55,7 @@
 		margin: 0 auto !important;
 	}
 	.smart-life-content {
-		height: 600px;
+		height: 413px;
 		margin-top: 20px;
 	}
 	.smart-life-left {
