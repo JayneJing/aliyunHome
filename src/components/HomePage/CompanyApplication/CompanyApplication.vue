@@ -2,7 +2,7 @@
 
 	<div class="company-application-body">
 		<div class="company-application-title">企业应用中心</div>
-		<div>
+		<div class="company-application-content">
 			<div class="company-application-left">
 				<div class="title">
 					<p>买软件、选服务</p>
@@ -15,31 +15,39 @@
 				<div class="button">立即前往</div>
 			</div>
 			<div class="company-application-right">
-				<div class="application">
+				<div class="application" v-for="(value, key) in companyApplicationInfo" :key="key">
 					<div class="card">
-						<span>在线申请</span>
-						<span>快速登记</span>
+						<span v-for="(cardValue, key) in value.card" :key="key">{{ cardValue }}</span>
 					</div>
-					<div class="title">软件著作权登记</div>
-					<div class="description">可用于申请高新企业、上架APP
-						助力保护开发者权益，防止代码被抄袭或盗版</div>
-					<div class="money">
+					<div class="title">{{ value.title }}</div>
+					<div class="description">{{ value.description }}</div>
+					<div class="money" v-if="value.moneyType === 0">
 						<span class="symbol">¥</span>
-						<span class="data">399</span>
+						<span class="data">{{ value.money }}</span>
 						<span>起</span>
 					</div>
-
+					<div class="money" v-else-if="value.moneyType === 1">
+						<span class="symbol">咨询有礼</span>
+					</div>
+					<div class="money" v-else="value.moneyType === 2">
+						<span class="symbol">免费试用</span>
+					</div>
+					<div class="bottom-button">
+						<a class="left-button">更多产品</a>
+						<a class="right-button">查看详情</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
 <script>
-
+	import {companyApplicationInfo} from './CompanyApplication'
   export default {
     name: "CompanyApplication",
     data() {
       return {
+        companyApplicationInfo: companyApplicationInfo
       }
     },
     components: {
@@ -58,6 +66,9 @@
 		font-weight: normal;
 		display: block;
 		margin: 20px 0;
+	}
+	.company-application-content {
+		height: 600px;
 	}
 	.company-application-left {
 		width: 300px;
@@ -193,5 +204,47 @@
 		line-height: 26px;
 		height: 26px;
 	}
-
+	.application .bottom-button {
+		transition: all .3s;
+		display: none;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
+		padding-left: 0;
+		background-color: #ff6a00;
+		text-align: center;
+		line-height: 60px;
+		clear: both;
+	}
+	.application:hover .bottom-button {
+		display: inline-block;
+	}
+	.application .bottom-button .left-button {
+		text-decoration: none;
+		float: left;
+		text-align: center;
+		font-size: 16px;
+		letter-spacing: .65px;
+		height: 60px;
+		width: 50%;
+		position: relative;
+		z-index: 1;
+		background-color: #fff;
+		border: 1px solid #ff6a00;
+		box-sizing: border-box;
+		color: #ff6a00;
+	}
+	.application .bottom-button .right-button {
+		text-decoration: none;
+		float: right;
+		text-align: center;
+		font-size: 16px;
+		color: #fff;
+		letter-spacing: .65px;
+		width: 50%;
+		position: relative;
+		z-index: 1;
+		transition: all .3s;
+	}
 </style>
