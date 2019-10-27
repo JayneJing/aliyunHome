@@ -2,10 +2,12 @@
   <div id="app">
 		<TopNav></TopNav>
 		<router-view></router-view>
+<!--	  <Footer></Footer>-->
 	</div>
 </template>
 <script>
   import TopNav from './TopNav/TopNav.vue'
+  import Footer from './Footer/Footer.vue'
   export default {
     name: 'app',
     data() {
@@ -14,6 +16,7 @@
     },
     components: {
       TopNav,
+      Footer
     },
   }
 </script>

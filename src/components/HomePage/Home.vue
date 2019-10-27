@@ -5,6 +5,7 @@
 		<HotProduct></HotProduct>
 		<SmartLife></SmartLife>
 		<BestPractice></BestPractice>
+		<SafetyComponent></SafetyComponent>
 	</div>
 </template>
 <script>
@@ -13,6 +14,7 @@
   import HotProduct from './HotProduct/HotProduct.vue'
   import SmartLife from './SmartLife/SmartLife.vue'
   import BestPractice from './BestPractice/BestPractice.vue'
+  import SafetyComponent from './SafetyComponent/SafetyComponent.vue'
   export default {
     name: "home",
     data() {
@@ -24,7 +26,8 @@
       CompanyApplication,
       NavigationAndCarousel,
       SmartLife,
-      BestPractice
+      BestPractice,
+      SafetyComponent
     },
   }
 </script>
