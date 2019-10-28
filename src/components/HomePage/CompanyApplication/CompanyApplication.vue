@@ -1,5 +1,4 @@
 <template>
-
 	<div class="company-application-body">
 		<div class="company-application-title">企业应用中心</div>
 		<div class="company-application-content">
@@ -51,7 +50,6 @@
       }
     },
     components: {
-
     },
   }
 </script>

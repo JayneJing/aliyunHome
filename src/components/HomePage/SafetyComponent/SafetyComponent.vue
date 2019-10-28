@@ -8,7 +8,6 @@
 					<div style="height: 22px">
 						<a>了解阿里云安全<Icon type="md-arrow-forward" /></a>
 					</div>
-
 				</div>
 				<div class="safety-top-right">
 					<div class="safety-data">
@@ -73,9 +72,7 @@
 					<span>云计算服务能力评估</span>
 				</div>
 			</div>
-
 		</div>
-
 	</div>
 </template>
 <script>

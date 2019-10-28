@@ -130,7 +130,6 @@
 					<a>聚划算</a>
 				</div>
 				<div class="copyright">© 2009-2019 Aliyun.com 版权所有 ICP证：浙B2-20080101</div>
-
 			</div>
 		</div>
 
@@ -139,7 +138,7 @@
 <script>
   import {mapState} from 'vuex'
   export default {
-    name: "TopNav",
+    name: "Footer",
     data() {
       return {
       }
@@ -194,6 +193,9 @@
 		letter-spacing: .44px;
 		cursor: pointer;
 	}
+	.consult-text a:hover {
+		color: #ff6a00;
+	}
 	.main-server {
 		vertical-align: top;
 		display: inline-block;
@@ -217,6 +219,10 @@
 		letter-spacing: .43px;
 		text-decoration: none;
 		transition: color .3s;
+		cursor: pointer;
+	}
+	.main-server .text:hover {
+		color: #ff6a00;
 	}
 	.footer-product {
 		width: 100%;
@@ -248,6 +254,9 @@
 		color: #73777a;
 		width: 113px;
 	}
+	.footer-product .list .item a:hover {
+		color: #ff6a00;
+	}
 	.footer-about {
 		width: 100%;
 		padding-top: 10px;
@@ -267,6 +276,9 @@
 		display: inline-block;
 		margin-right: 35px;
 	}
+	.footer-about .big-text a:hover {
+		color: #ff6a00;
+	}
 	.footer-about .small-text {
 		width: 100%;
 		height: auto;
@@ -280,6 +292,9 @@
 		letter-spacing: .5px;
 		display: inline-block;
 		margin-right: 10px;
+	}
+	.footer-about .small-text a:hover {
+		color: #ff6a00;
 	}
 	.footer-about .copyright {
 		text-align: left;

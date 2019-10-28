@@ -46,10 +46,8 @@
 					<a>免费试用</a>
 				</div>
 			</div>
-
 		</div>
 	</div>
-
 </template>
 <script>
   import {mapState} from 'vuex'

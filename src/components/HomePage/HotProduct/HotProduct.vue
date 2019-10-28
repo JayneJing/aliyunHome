@@ -1,5 +1,4 @@
 <template>
-
 	<div class="hot-product-body">
 		<div class="hot-product-title">热门产品</div>
 		<div class="hot-product-content">
@@ -32,7 +31,6 @@
 					<div class="bottom-button">
 						<a>立即购买</a>
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -48,7 +46,6 @@
       }
     },
     components: {
-
     },
   }
 </script>

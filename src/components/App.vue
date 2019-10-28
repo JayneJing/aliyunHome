@@ -3,11 +3,13 @@
 		<TopNav></TopNav>
 		<router-view></router-view>
 	  <Footer></Footer>
+	  <ContactUsComponent></ContactUsComponent>
 	</div>
 </template>
 <script>
   import TopNav from './TopNav/TopNav.vue'
   import Footer from './Footer/Footer.vue'
+  import ContactUsComponent from './ContactUsComponent/ContactUsComponent.vue'
   export default {
     name: 'app',
     data() {
@@ -16,7 +18,8 @@
     },
     components: {
       TopNav,
-      Footer
+      Footer,
+      ContactUsComponent
     },
   }
 </script>

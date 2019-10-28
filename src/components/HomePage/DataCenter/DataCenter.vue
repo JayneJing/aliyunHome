@@ -1,7 +1,6 @@
 <template>
 	<div class="data-center-component">
 		<div class="data-center-body">
-
 			<div class="data-center-top">
 				<div class="text">
 					<div class="title">遍布全球的数据中心,</div>
@@ -9,13 +8,11 @@
 					<div class="subTitle">无论是硅谷核心区，还是迪拜贸易枢纽区，全球无缝覆盖，提供CN2高速网络，BGP接入支持</div>
 					<a>了解全球数据中心<Icon type="md-arrow-forward" /></a>
 				</div>
-
 			</div>
 			<div class="data-center-img">
 				<img src="../../../assets/HomePage/data-center.jpg">
 			</div>
 		</div>
-
 	</div>
 </template>
 <script>

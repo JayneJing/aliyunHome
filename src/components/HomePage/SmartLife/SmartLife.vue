@@ -1,5 +1,4 @@
 <template>
-
 	<div class="smart-life-body">
 		<div class="smart-life-content">
 			<div class="smart-life-left">
@@ -38,14 +37,13 @@
 <script>
 	import {SmartLifeInfo} from './SmartLife'
   export default {
-    name: "HotProduct",
+    name: "SmartLife",
     data() {
       return {
         SmartLifeInfo: SmartLifeInfo
       }
     },
     components: {
-
     },
   }
 </script>

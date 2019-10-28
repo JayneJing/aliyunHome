@@ -1,5 +1,4 @@
 <template>
-
 	<div class="best-practice-body">
 		<div class="best-practice-content">
 			<div class="best-practice-left">
@@ -24,11 +23,9 @@
 						<div class="title">{{ value.title }}</div>
 						<div class="description">{{ value.description }}</div>
 					</a>
-
 					<div class="card">
 						<a v-for="(cardValue, key) in value.card" :key="key">{{ cardValue }}</a>
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -37,14 +34,13 @@
 <script>
 	import {BestPracticeInfo} from './BestPractice'
   export default {
-    name: "HotProduct",
+    name: "BestPractice",
     data() {
       return {
         BestPracticeInfo: BestPracticeInfo
       }
     },
     components: {
-
     },
   }
 </script>

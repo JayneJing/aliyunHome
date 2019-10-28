@@ -8,18 +8,15 @@
 				loop
 				@on-change="(oldValue, value) => getItemIndex(oldValue, value)">
 			<CarouselItem class="carouse-item-body" v-for="(value, key) in carouselInfo" :key="key">
-				<a>
-					<div class="carouse-item-text" v-show="itemIndex === key">
+				<img class="carousel-item-img" :src="require('../../../assets/' + value.img)">
+					<div class="carouse-item-text">
 						<h1>{{ value.title }}</h1>
 						<p>{{ value.subtitle }}</p>
 						<div class="carouse-item-button">查看详情<Icon type="ios-arrow-round-forward" size="16" /></div>
 					</div>
-					<img class="carousel-item-img" :src="require('../../../assets/' + value.img)">
-				</a>
 			</CarouselItem>
 		</Carousel>
 	</div>
-
 </template>
 <script>
   import {mapState} from 'vuex'
@@ -61,22 +58,23 @@
 	}
 	.carouse-item-text {
 		z-index: 200;
-		position: absolute;
 		top: 61px;
 		left: 40px;
+		position: relative;
+		height: 320px;
 	}
 	.carouse-item-text h1 {
 		font-weight: 400;
 		margin: 0;
 		margin-bottom: 12px !important;
-		text-align: left;
 		line-height: 40px;
 		font-family: PingFangSC-Regular,sans-serif;
 		font-size: 28px !important;
 		color: #181818;
 		width: 590px;
 		height: 40px;
-		padding: 0;
+		z-index: 200;
+		position: relative;
 	}
 	.carouse-item-text p {
 		text-align: left;
@@ -85,10 +83,10 @@
 		color: #999;
 		height: 60px;
 		width: 514px;
-		padding: 0;
-		margin: 0;
 		font-weight: 400;
 		line-height: 24px;
+		z-index: 200;
+		position: relative;
 	}
 	.carouse-item-button {
 		color: #ff6a00;
@@ -103,8 +101,8 @@
 		line-height: 36px;
 	}
 	.carousel-item-img {
+		position: absolute;
 		height: 320px;
-		z-index: 100;
+		z-index: 0;
 	}
-
 </style>
