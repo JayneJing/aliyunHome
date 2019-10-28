@@ -6,6 +6,7 @@
 		<SmartLife></SmartLife>
 		<BestPractice></BestPractice>
 		<SafetyComponent></SafetyComponent>
+		<DataCenter></DataCenter>
 	</div>
 </template>
 <script>
@@ -15,6 +16,7 @@
   import SmartLife from './SmartLife/SmartLife.vue'
   import BestPractice from './BestPractice/BestPractice.vue'
   import SafetyComponent from './SafetyComponent/SafetyComponent.vue'
+  import DataCenter from './DataCenter/DataCenter.vue'
   export default {
     name: "home",
     data() {
@@ -27,7 +29,8 @@
       NavigationAndCarousel,
       SmartLife,
       BestPractice,
-      SafetyComponent
+      SafetyComponent,
+      DataCenter
     },
   }
 </script>
